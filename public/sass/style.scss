@@ -1,0 +1,227 @@
+@import './mixins.scss';
+@import './models.scss';
+
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.body{
+    width:100%;
+    height:100%;
+    background-color:rgba(73, 186, 122, 0.838);
+    @include centred_elements;
+    @include container_imgs;
+
+    &_one{
+        background-image:url("../imagens/pais01.png");
+    }   
+    &_two{
+        background-image:url("../imagens/pais02.png");
+    }
+    &_three{
+        background-image:url("../imagens/pais03.png");
+    }
+}
+
+.container_application{
+    width:70%;
+    margin-top:15px;
+
+    .title{
+        @include centred_elements;
+        width:30%;
+        margin:5px auto;
+        letter-spacing: 2.5px;
+        font-size:32px;
+        font-weight:600;
+        box-shadow:1px 7px 9px rgb(60, 59, 59);
+
+        @media(max-width:1117px){
+           &{
+            width:100%;
+           }
+        }
+    }
+
+    .puppet{
+        width:54%;
+        height:280px;
+        margin:10px auto;
+        border-radius:10px;
+        background:url('../imagens/pais03.png');
+        box-shadow:1px 7px 9px rgb(60, 59, 59);
+        @include container_imgs;
+
+        &_one{
+            background:url('../imagens/img01.png'); 
+            @include container_imgs;
+        }
+        &_two{
+            background:url('../imagens/img02.png');
+            @include container_imgs;
+        }
+        &_three{
+            background:url('../imagens/img03.png');
+            @include container_imgs;
+        }
+        &_four{
+            background:url('../imagens/img04.png');
+            @include container_imgs;
+        }
+        &_five{
+            background:url('../imagens/img05.png');
+            @include container_imgs;
+        }
+        &_six{
+            background:url('../imagens/img06.png');
+            @include container_imgs;
+        }
+        &_derrota{
+            background:url('../imagens/derrota.png');
+            @include container_imgs;
+        }
+        &_vitory{
+            background:url('../imagens/vitory.png');
+            @include container_imgs;
+        }
+
+        @media(max-width: 1110px){
+           &{
+            width:65%;
+            height:310px;
+           }
+        }
+        @media(max-width: 840px){
+            &{
+                width:65%;
+                height:310px;
+            }
+        }
+        @media(max-width: 650px){
+            &{
+                width:65%;
+                height:310px;
+            }
+        }
+        @media(max-width: 520px){
+            &{
+                width:68%;
+                height:280px;
+            }
+        }
+    }
+    
+    .secret_word{
+        @include centred_elements;
+        flex-wrap:wrap;
+        margin:20px;
+        box-shadow:1px 7px 9px rgb(35, 34, 34);
+
+        .secret_letter{
+            font-size:36px;
+            font-weight:bold;
+            border-bottom:4px solid  rgb(59, 7, 7);
+            margin:8px;
+        }
+        .letter_space{
+            font-size:34px;
+            font-weight:600;
+            margin:8px;
+        }
+    }
+    
+    .div_container_btns{
+        width:100%;
+        display:flex;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom:15px;
+        background-image:linear-gradient(to left,rgba(126, 185, 243, 0.467),rgba(136, 245, 183, 0.722));
+        border-radius:15px;
+        box-shadow:1px 7px 9px rgb(35, 34, 34);
+        
+        
+        .field{
+            @include centred_elements;
+            flex-wrap:wrap;
+
+            button{
+                padding:16px 15px;
+                border-radius:10px;
+                font-size: 20px;
+                font-weight:600;
+                margin:6px;
+                box-shadow:1px 7px 9px rgb(60, 59, 59);
+                cursor:pointer;
+
+                &:hover{
+                    background-color: rgb(192, 190, 190);
+                    transform:scale(1.3);
+                }
+
+                &:disabled{
+                    cursor:not-allowed;
+                }
+
+                @media(max-width:500px){
+                    &{
+                        padding:10px;
+                    }
+                }
+            }
+        }
+
+        @media(max-width:500px){
+            &{
+                border-radius:0px;
+            }
+        }
+    }
+
+    .field_tags{
+        margin:-5px;
+        display:flex;
+        justify-content: space-around;
+        align-items: center;
+        border-bottom:4px dashed #000;
+
+        .category{
+            font-size:28px;
+            font-weight:600;
+            margin:20px 10px 4px 8px;
+        }
+    
+        .btn_dica_modal{
+            width:100px;
+            height: 40px;
+            font-weight:bold;
+            border-radius:10px;
+            border:none;
+            font-size:20px;
+            margin:0px 10px 0px 8px;
+            cursor: pointer;
+            box-shadow:1px 7px 9px rgb(60, 59, 59);
+    
+            &:hover{
+                background-color:rgba(95, 158, 160, 0.853);
+            }
+        }
+
+        @media(max-width:500px){
+            &{
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+
+    @media(max-width:500px){
+        &{
+            width:100%;
+            height:310px;
+        }
+    }
+}

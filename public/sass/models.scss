@@ -1,0 +1,68 @@
+.vitory,.derrota,.modal_dica{
+    width:62%;
+    height:200px;
+    background-color:rgba(231, 231, 234, 0.955);
+    position:absolute;
+    left:22%;
+    top:24%;
+    border:2px solid #000;
+    border-radius:2px;
+    animation:vitory_animation 1s ease-in-out alternate;
+    display:none;
+    
+    button{
+        width:60px;
+        height:40px;
+        background:rgba(220, 47, 16, 0.759);
+        font-weight:600;
+        font-size:22px;
+        position:absolute;
+        right: 10px;
+        top:10px;
+        cursor:pointer;
+
+        &:hover{
+            background:rgba(209, 80, 57, 0.759);
+        }
+    }
+    h3{
+        width:80%;
+        font-size:24px;
+        position:absolute;
+        top:55%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        margin:10px;
+
+        .smaill_vit_msg{
+            color:green;
+        }
+        .smaill_der_msg{
+            color:red;
+        }
+    }
+
+    .dica{
+        display:block;
+    }
+
+    @media(max-width:500px){
+        .vitory,.derrota{
+            width:100%;
+            height:280px;
+        }
+    }
+}
+
+.dica{
+    display:block;
+}
+
+@keyframes vitory_animation{
+    0%{
+        transform:translatey(-100px);
+    }
+    100%{
+        transform:translatey(50px);
+    }
+}
