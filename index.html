@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo_da_Forca||Javascript||HTML||CSS</title>
+    <link rel="stylesheet" href="public/css/style.css">
+</head>
+<body class="body">
+    <section class="container_application">
+        <!-- Title -->
+        <h1 class="title">Jogo da Forca</h1>
+
+        <!-- hangman puppet -->
+        <div class="puppet"></div>
+
+        <!-- Models -->
+        <!--Model de exibição da mensagem de vitoria-->
+        <div class="modal_vitory vitory">
+            <button class="btn_close_vitory" onClick="close_modal();">X</button>
+            <h3>Parabens, Voce venceu, a palavra secreta era: <small class="smaill_vit_msg"></small></h3>
+        </div>
+        <!--Model de exibição da mensagem de derrota-->
+        <div class="modal_derrota derrota">
+            <button class="btn_close_derrota" onClick="close_modal();"">X</button>
+            <h3>Ops!, Voce perdeu, a palavra secreta era: <small class="smaill_der_msg"></small>, Tente novamente!</h3>
+        </div>
+        <!--Model de exibição da mensagem da dica-->
+        <div class="modal_dica">
+            <button class="btn_close_dica">X</button>
+            <h3><small class="smaill_dica_msg"></small></h3>
+        </div>
+
+        <!-- category field and dica-->
+        <div class="field_tags">
+            <button class="btn_dica_modal">Dica</button>
+            <h2 class="category"></h2>
+        </div>
+
+        <!-- game board -->
+        <div class="scoreboard"></div>
+
+        <!-- secret word field -->
+        <div class="secret_word"></div>
+
+        <!-- field of buttons -->
+        <div class="div_container_btns">
+            <div class="field">
+                <button class="btn_A" onClick="click_btn('A')">A</button>
+                <button class="btn_B" onClick="click_btn('B')">B</button>
+                <button class="btn_C" onClick="click_btn('C')">C</button>
+                <button class="btn_D" onClick="click_btn('D')">D</button>
+                <button class="btn_E" onClick="click_btn('E')">E</button>
+                <button class="btn_F" onClick="click_btn('F')">F</button>
+                <button class="btn_G" onClick="click_btn('G')">G</button>
+                <button class="btn_H" onClick="click_btn('H')">H</button>
+                <button class="btn_I" onClick="click_btn('I')">I</button>
+                
+                <button class="btn_J" onClick="click_btn('J')">J</button>
+                <button class="btn_K" onClick="click_btn('K')">K</button>
+                <button class="btn_L" onClick="click_btn('L')">L</button>
+                <button class="btn_M" onClick="click_btn('M')">M</button>
+                <button class="btn_N" onClick="click_btn('N')">N</button>
+                <button class="btn_O" onClick="click_btn('O')">O</button>
+                <button class="btn_P" onClick="click_btn('P')">P</button>
+                <button class="btn_Q" onClick="click_btn('Q')">Q</button>
+                <button class="btn_R" onClick="click_btn('R')">R</button>
+
+                <button class="btn_S" onClick="click_btn('S')">S</button>
+                <button class="btn_T" onClick="click_btn('T')">T</button>
+                <button class="btn_U" onClick="click_btn('U')">U</button>
+                <button class="btn_V" onClick="click_btn('V')">V</button>
+                <button class="btn_W" onClick="click_btn('W')">W</button>
+                <button class="btn_X" onClick="click_btn('X')">X</button>
+                <button class="btn_Y" onClick="click_btn('Y')">Y</button>
+                <button class="btn_Z" onClick="click_btn('Z')">Z</button>
+            </div>
+        </div>        
+    </section>
+    <script src="./public/javascript/script.js"></script>
+</body>
+</html>
